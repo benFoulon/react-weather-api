@@ -8,14 +8,12 @@ export default class CurrentWeather extends Component {
     }
     
     componentDidMount(){
-        axios.get('https://api.openweathermap.org/data/2.5/onecall?lat=50.4291723&lon=2.8319805&units=metric&lang=fr&exclude=minutely,hourly,alerts&appid=8c3a54c385c9c9d874d88f2cd6b3dda8')
+        axios.get('https://api.openweathermap.org/data/2.5/onecall?lat=50.4291723&lon=2.8319805&units=metric&lang=fr&exclude=minutely,hourly,alerts&appid=c6e4cf8fab1ea488c176393a949f8573')
         .then(res=>{
             this.setState({
                 current: res.data.current
             })
         })
-
-        // axios.get("openweathermap.org/img/wn/${icon}@2x.png")
     }
 
     render() {

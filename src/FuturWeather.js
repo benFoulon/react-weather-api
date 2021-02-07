@@ -8,7 +8,7 @@ export default class FuturWeather extends Component {
     }
 
     componentDidMount(){
-        axios.get('https://api.openweathermap.org/data/2.5/onecall?lat=50.4291723&lon=2.8319805&units=metric&lang=fr&exclude=minutely,hourly,alerts&appid=8c3a54c385c9c9d874d88f2cd6b3dda8')
+        axios.get('https://api.openweathermap.org/data/2.5/onecall?lat=50.4291723&lon=2.8319805&units=metric&lang=fr&exclude=minutely,hourly,alerts&appid=c6e4cf8fab1ea488c176393a949f8573')
         .then(res => {
             console.log(new Date(res.data.daily[1].dt*1000).toLocaleString("fr-FR", {weekday:"long"}))
 
